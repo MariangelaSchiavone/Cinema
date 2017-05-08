@@ -16,14 +16,10 @@
    <extension abstractclassprefix="Generated" classprefix="CinemaFacade" managername="CinemaFacadeManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="cinemaFacade">
                
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
-      <!-- <requires-extension name="cms"/> -->         
+      <requires-extension name="cinemaCore"/>
       
 
       <coremodule generated="true" manager="it.cinemafacade.jalo.CinemaFacadeManager" packageroot="it.cinemafacade"/>
-
-      <webmodule jspcompile="false" webroot="/cinemaFacade"/>
-					
-	
 
    </extension>
       
