@@ -8,6 +8,6 @@
 		Actor Details for ${actor.name} ${actor.surname}<br><br> 
 		Nationality: ${actor.nationality}<br>
 		
-		<a href="../MovieDetails">Back to the movie</a>
+		<a href="../cinemas">Back to the movie</a>
 	</body>
 </html>
