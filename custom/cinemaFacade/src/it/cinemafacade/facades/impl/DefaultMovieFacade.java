@@ -44,6 +44,7 @@ public class DefaultMovieFacade implements MovieFacade
 		}
 
 		final MovieData movieData = new MovieData();
+		movieData.setCode(movie.getCode());
 		movieData.setTitle(movie.getTitle());
 		movieData.setGenre(movie.getGenre().toString());
 		movieData.setTime(movie.getTime());
@@ -52,6 +53,7 @@ public class DefaultMovieFacade implements MovieFacade
 
 		final DirectorData directorData = new DirectorData();
 		final DirectorModel directorModel = movie.getDirector();
+		directorData.setCode(directorModel.getCode());
 		directorData.setName(directorModel.getName());
 		directorData.setSurname(directorModel.getSurname());
 		directorData.setNationality(directorModel.getNationality());
@@ -60,6 +62,7 @@ public class DefaultMovieFacade implements MovieFacade
 
 		final ProductorData productorData = new ProductorData();
 		final ProductorModel productorModel = movie.getProductor();
+		productorData.setCode(productorModel.getCode());
 		productorData.setName(productorModel.getName());
 		productorData.setSurname(productorModel.getSurname());
 		productorData.setNationality(productorModel.getNationality());
@@ -72,6 +75,7 @@ public class DefaultMovieFacade implements MovieFacade
 		{
 			final ActorModel actorModel = actorModelIterator.next();
 			final ActorData actorData = new ActorData();
+			actorData.setCode(actorModel.getCode());
 			actorData.setName(actorModel.getName());
 			actorData.setSurname(actorModel.getSurname());
 			actorData.setNationality(actorModel.getNationality());

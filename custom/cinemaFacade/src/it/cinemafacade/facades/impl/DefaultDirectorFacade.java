@@ -31,6 +31,7 @@ public class DefaultDirectorFacade implements DirectorFacade
 			throw new IllegalArgumentException("Director with code " + code + " not found.");
 		}
 		final DirectorData directorData = new DirectorData();
+		directorData.setCode(director.getCode());
 		directorData.setName(director.getName());
 		directorData.setSurname(director.getSurname());
 		directorData.setNationality(director.getNationality());

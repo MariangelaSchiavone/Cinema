@@ -25,7 +25,7 @@ public class MovieController
 	{
 		movieDetails = URLDecoder.decode(movieDetails, "UTF-8");
 		final MovieData movie = movieFacade.getMovie(movieDetails);
-		//		movie.setTitle(NameEncoded.getNameEncoded(movie.getTitle()));
+		//movie.setTitle(NameEncoded.getNameEncoded(movie.getTitle()));
 		model.addAttribute("movie", movie);
 		return "MovieDetails";
 	}

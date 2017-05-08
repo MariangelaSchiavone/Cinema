@@ -17,22 +17,16 @@ import it.cinemafacade.facades.ActorFacade;
 public class ActorController
 {
 
+	@Autowired
 	private ActorFacade actorFacade;
 
-	@RequestMapping(value = "/actors/{actorCode}")
-	public String showActorDetails(final Model model, @PathVariable final String actorCode) throws UnsupportedEncodingException
+	@RequestMapping(value = "/cinemas/movies/actors/{actorCode}")
+	public String showActorDetails(final Model model, @PathVariable String actorCode) throws UnsupportedEncodingException
 	{
 		actorCode = URLDecoder.decode(actorCode, "UTF-8");
 		final ActorData actor = actorFacade.getActor(actorCode);
-		actor.setName(nameEncoded.);
 		model.addAttribute("actor", actor);
 		return "ActorDetails";
-	}
-
-	@Autowired
-	public void setFacade(final ActorFacade facade)
-	{
-		this.actorFacade = facade;
 	}
 
 }

@@ -21,8 +21,8 @@ public class DefaultActorDAO implements ActorDAO
 	@Override
 	public List<ActorModel> findActorsByCode(final String code)
 	{
-		final String queryString = "SELECT {a:" + ActorModel.PK + "}" + "FROM {" + ActorModel._TYPECODE + " AS a" + "WHERE "
-				+ "{p: " + ActorModel.CODE + "}=?code ";
+		final String queryString = "SELECT {a:" + ActorModel.PK + "}" + "FROM {" + ActorModel._TYPECODE + " AS a}" + "WHERE "
+				+ "{a: " + ActorModel.CODE + "}=?code ";
 
 		final FlexibleSearchQuery query = new FlexibleSearchQuery(queryString);
 		query.addQueryParameter("code", code);

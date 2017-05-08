@@ -1,14 +1,19 @@
 package it.cinemafacade.facades.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import it.cinemacore.model.ActorModel;
 import it.cinemacore.services.ActorService;
 import it.cinemafacade.data.ActorData;
 import it.cinemafacade.facades.ActorFacade;
 
 
+@Component(value = "actorFacade")
 public class DefaultActorFacade implements ActorFacade
 {
 
+	@Autowired
 	private ActorService actorService;
 
 	@Override

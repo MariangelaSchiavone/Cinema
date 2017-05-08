@@ -1,7 +1,4 @@
-/**
- *
- */
-package it.cinemafrontend.controller;
+package it.cinemafrontend.controllers;
 
 
 import java.io.UnsupportedEncodingException;
@@ -23,19 +20,13 @@ public class ProductorController
 	@Autowired
 	private ProductorFacade productorFacade;
 
-	@RequestMapping(value = "/productors/{productorCode}")
+	@RequestMapping(value = "/cinemas/movies/productors/{productorCode}")
 	public String showProductorDetails(@PathVariable String productorCode, final Model model) throws UnsupportedEncodingException
 	{
 		productorCode = URLDecoder.decode(productorCode, "UTF-8");
 		final ProductorData productor = productorFacade.getProductor(productorCode);
 		model.addAttribute("productor", productor);
 		return "ProductorDetails";
-	}
-
-	@Autowired
-	public void setFacade(final ProductorFacade facade)
-	{
-		this.productorFacade = facade;
 	}
 
 }

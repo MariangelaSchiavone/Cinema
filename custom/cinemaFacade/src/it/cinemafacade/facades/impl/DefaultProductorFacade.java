@@ -1,6 +1,3 @@
-/**
- *
- */
 package it.cinemafacade.facades.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +33,7 @@ public class DefaultProductorFacade implements ProductorFacade
 		}
 		// Now we can create the ProductData transfer object
 		final ProductorData productorData = new ProductorData();
+		productorData.setCode(productor.getCode());
 		productorData.setName(productor.getName());
 		productorData.setSurname(productor.getSurname());
 		productorData.setNationality(productor.getNationality());
