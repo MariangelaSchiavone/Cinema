@@ -129,7 +129,7 @@
 				<attribute qualifier="year" type="java.lang.Integer">
 					<persistence type="property" />
 				</attribute>
-				<attribute qualifier="summary" type="java.lang.Integer">
+				<attribute qualifier="summary" type="java.lang.String">
 					<persistence type="property" />
 				</attribute>
 			</attributes>

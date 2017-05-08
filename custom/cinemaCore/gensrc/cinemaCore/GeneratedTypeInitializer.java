@@ -578,7 +578,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"Movie", 
 					"summary",  
 					null,
-					"java.lang.Integer",
+					"java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions

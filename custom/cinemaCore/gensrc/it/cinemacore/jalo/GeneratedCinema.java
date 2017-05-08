@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 8-mag-2017 13.23.07                         ---
+ * --- Generated at 8-mag-2017 13.36.02                         ---
  * ----------------------------------------------------------------
  */
 package it.cinemacore.jalo;

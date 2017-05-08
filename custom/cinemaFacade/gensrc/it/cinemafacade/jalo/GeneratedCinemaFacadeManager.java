@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 8-mag-2017 12.52.01                         ---
+ * --- Generated at 8-mag-2017 13.05.47                         ---
  * ----------------------------------------------------------------
  */
 package it.cinemafacade.jalo;

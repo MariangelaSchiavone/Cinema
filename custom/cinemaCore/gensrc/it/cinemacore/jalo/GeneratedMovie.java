@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 8-mag-2017 13.23.07                         ---
+ * --- Generated at 8-mag-2017 13.36.02                         ---
  * ----------------------------------------------------------------
  */
 package it.cinemacore.jalo;
@@ -377,44 +377,25 @@ public abstract class GeneratedMovie extends GenericItem
 	 * <i>Generated method</i> - Getter of the <code>Movie.summary</code> attribute.
 	 * @return the summary
 	 */
-	public Integer getSummary(final SessionContext ctx)
+	public String getSummary(final SessionContext ctx)
 	{
-		return (Integer)getProperty( ctx, SUMMARY);
+		return (String)getProperty( ctx, SUMMARY);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>Movie.summary</code> attribute.
 	 * @return the summary
 	 */
-	public Integer getSummary()
+	public String getSummary()
 	{
 		return getSummary( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Movie.summary</code> attribute. 
-	 * @return the summary
-	 */
-	public int getSummaryAsPrimitive(final SessionContext ctx)
-	{
-		Integer value = getSummary( ctx );
-		return value != null ? value.intValue() : 0;
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>Movie.summary</code> attribute. 
-	 * @return the summary
-	 */
-	public int getSummaryAsPrimitive()
-	{
-		return getSummaryAsPrimitive( getSession().getSessionContext() );
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>Movie.summary</code> attribute. 
 	 * @param value the summary
 	 */
-	public void setSummary(final SessionContext ctx, final Integer value)
+	public void setSummary(final SessionContext ctx, final String value)
 	{
 		setProperty(ctx, SUMMARY,value);
 	}
@@ -423,25 +404,7 @@ public abstract class GeneratedMovie extends GenericItem
 	 * <i>Generated method</i> - Setter of the <code>Movie.summary</code> attribute. 
 	 * @param value the summary
 	 */
-	public void setSummary(final Integer value)
-	{
-		setSummary( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Movie.summary</code> attribute. 
-	 * @param value the summary
-	 */
-	public void setSummary(final SessionContext ctx, final int value)
-	{
-		setSummary( ctx,Integer.valueOf( value ) );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>Movie.summary</code> attribute. 
-	 * @param value the summary
-	 */
-	public void setSummary(final int value)
+	public void setSummary(final String value)
 	{
 		setSummary( getSession().getSessionContext(), value );
 	}
