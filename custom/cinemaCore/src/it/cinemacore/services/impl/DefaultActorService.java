@@ -5,7 +5,7 @@ import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -14,10 +14,10 @@ import it.cinemacore.model.ActorModel;
 import it.cinemacore.services.ActorService;
 
 
-@Component
+@Component(value = "actorService")
 public class DefaultActorService implements ActorService
 {
-
+	@Autowired
 	private ActorDAO actorDAO;
 
 	@Override
@@ -35,12 +35,6 @@ public class DefaultActorService implements ActorService
 		}
 		return result.get(0);
 
-	}
-
-	@Required
-	public void setActorDAO(final ActorDAO actorDAO)
-	{
-		this.actorDAO = actorDAO;
 	}
 
 }
