@@ -10,6 +10,6 @@
             Surname: ${director.surname}<br>
             Nationality: ${director.nationality}<br>
             Matches:<br>
-        <a href="../movies">Back to Movie</a>
+        <a href="../cinemas">Back to Movie</a>
     </body>
 </html>
