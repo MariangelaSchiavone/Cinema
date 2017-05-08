@@ -21,10 +21,6 @@
 
       <coremodule generated="true" manager="it.cinemacore.jalo.CinemaCoreManager" packageroot="it.cinemacore"/>
 
-      <webmodule jspcompile="false" webroot="/cinemaCore"/>
-					
-	
-
    </extension>
       
 </extensioninfo>

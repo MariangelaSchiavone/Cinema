@@ -1,0 +1,53 @@
+INSERT_UPDATE Director	;code[unique=true]		;name			;surname		;nationality	;movies(code)
+						;1						;Quentin		;Tarantino		;USA			;1,2,6
+						;2						;Stanley		;Kubrick		;USA			;3
+						;3						;Christopher	;Nolan			;USA			;4
+						;4						;Paolo			;Sorrentino		;Italy			;5
+						
+INSERT_UPDATE Productor	;code[unique=true]		;name			;surname		;nationality	;movies(code)
+						;1						;Remo			;Labarca		;France			;2
+						;2						;Peter			;Griffin		;USA			;1
+						;3						;Homer			;Simpson		;USA			;3,4
+						;4						;Glen			;Quagmire		;Jamaica		;5,6								
+
+INSERT_UPDATE Actor		;code[unique=true]		;name		;surname		;nationality	;movies(code)
+					    ;1						;Maccio		;Capatonda		;Italy			;3
+					    ;2						;Herbert	;Ballerina		;Italy			;4
+						;3						;Walter		;White			;USA			;2,1
+						;4						;Giancarlo	;Esposito		;USA			;2,4
+						;5						;Jesse		;Pinkman		;USA			;6,3,4
+						;6						;Sandra		;Bullock		;USA			;1,5
+						;7						;Jennifer	;Lawrence		;USA			;4,5
+						;8						;Mark		;Ruffalo		;USA			;1,3
+						;9						;Nathalie	;Portman		;Canada			;4
+						;10						;Ted		;Mosby			;Brazil			;6
+						;11						;Raul		;Bova			;Italy			;2
+						;12						;Rocco		;Papaleo		;Italy			;3,2
+
+
+INSERT_UPDATE Movie		;code[unique=true]		;title				;genre(code)	;time			;year	;summary																						
+						;1						;Pulp Fiction		;DRAMA			;154			;1992	;Il film è un intreccio di varie storie collegate tra loro ma non in ordine cronologico.		
+						;2						;Full Metal Jacket	;DRAMA			;180			;1992	;Guerra in Vietman																				
+						;3						;Inception			;THRILLER		;150			;2010	;Sogni ricorsivi																				
+						;4						;I simpson			;COMEDY			;60				;2012	;Cartone animato americano															
+						;5						;La Grande Bellezza	;DRAMA			;160			;2014	;Suora nana che fuma e giraffa a Roma
+						;6						;Top Gun			;COMEDY			;120			;2002	;Mariangiongiangela		
+						
+						
+INSERT_UPDATE Showtime	;code[unique=true]		;date[dateformat=yyyy-MM-dd]		;movie(code)
+						;1						;2017-05-08							;1
+						;2						;2017-05-08							;2
+						;3						;2017-05-08							;3
+						;4						;2017-05-08							;4
+						;5						;2017-05-08							;5
+						;6						;2017-05-15							;6
+						;7						;2017-05-15							;1
+						;8						;2017-05-15							;2
+						;9						;2017-05-15							;3
+						;10						;2017-05-15							;4
+						
+INSERT_UPDATE Cinema	;code[unique=true]		;name		 			;city		;showtimes(code)
+						;1						;Movieplex				;Avellino	;1,2,9,5
+						;2						;Medusa					;Salerno	;3,10,5
+						;3						;Nuovo Cinema Paradiso	;Napoli		;4,6,8,7	    
+	

@@ -17,13 +17,50 @@
 
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
 
-	<!--
-		Example Data POJO
-	
-	<bean class="it.cinemafacade.data.MyPojo">
-		<property name="id" type="String"/>
-		<property name="flag" type="boolean"/>
+	<bean class="it.cinemafacade.data.ProductorData">
+		<property name="code" type="String" />
+		<property name="name" type="String" />
+		<property name="surname" type="String" />
+		<property name="nationality" type="String" />
 	</bean>
-	-->
+
+	<bean class="it.cinemafacade.data.DirectorData">
+		<property name="code" type="String" />
+		<property name="name" type="String" />
+		<property name="surname" type="String" />
+		<property name="nationality" type="String" />
+	</bean>
+
+	<bean class="it.cinemafacade.data.ActorData">
+		<property name="code" type="String" />
+		<property name="name" type="String" />
+		<property name="surname" type="String" />
+		<property name="nationality" type="String" />
+	</bean>
+
+	<bean class="it.cinemafacade.data.MovieData">
+		<property name="code" type="String" />
+		<property name="title" type="String" />
+		<property name="genre" type="String" />
+		<property name="time" type="Integer" />
+		<property name="year" type="Integer" />
+		<property name="summary" type="String" />
+		<property name="director" type="it.cinemafacade.data.DirectorData" />
+		<property name="productor" type="it.cinemafacade.data.ProductorData" />
+		<property name="actors" type="java.util.List&lt;it.cinemafacade.data.ActorData&gt;" />
+	</bean>
+
+	<bean class="it.cinemafacade.data.ShowtimeData">
+		<property name="code" type="String" />
+		<property name="date" type="java.util.Date" />
+		<property name="movie" type="it.cinemafacade.data.MovieData" />
+	</bean>
+
+	<bean class="it.cinemafacade.data.CinemaData">
+		<property name="code" type="String" />
+		<property name="name" type="String" />
+		<property name="city" type="String" />
+		<property name="showtimes" type="java.util.List&lt;it.cinemafacade.data.ShowtimeData&gt;" />
+	</bean>
 
 </beans>
