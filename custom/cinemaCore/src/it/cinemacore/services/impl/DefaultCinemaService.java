@@ -5,6 +5,7 @@ import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,10 +27,10 @@ public class DefaultCinemaService implements CinemaService
 	}
 
 	@Override
-	public CinemaModel getCinemaByCode(final String code)
+	public CinemaModel getCinemaForCode(final String code)
 	{
 		final List<CinemaModel> result = cinemaDAO.findCinemasByCode(code);
-		if (result.isEmpty())
+		if (CollectionUtils.isEmpty(result))
 		{
 			throw new UnknownIdentifierException("Cinema with code '" + code + "' not found!");
 		}

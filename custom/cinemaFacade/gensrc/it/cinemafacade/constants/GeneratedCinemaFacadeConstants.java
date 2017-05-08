@@ -1,11 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
-<<<<<<< Updated upstream
- * --- Generated at 8-mag-2017 17.06.54                         ---
-=======
- * --- Generated at 8-mag-2017 15.59.56                         ---
->>>>>>> Stashed changes
+ * --- Generated at 8-mag-2017 17.47.47                         ---
  * ----------------------------------------------------------------
  */
 package it.cinemafacade.constants;
