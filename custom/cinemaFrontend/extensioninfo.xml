@@ -13,18 +13,17 @@
   
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-   <extension abstractclassprefix="Generated" classprefix="CinemaFrontend" managername="CinemaFrontendManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="cinemaFrontend">
-               
-      <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
-     <requires-extension name="cinemaFacade"/>        
-      
+<extension abstractclassprefix="Generated" classprefix="CinemaFrontend" managername="CinemaFrontendManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="cinemaFrontend">
+	
+	<!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
+	<requires-extension name="cinemaFacade"/>              
 
-      <coremodule generated="true" manager="it.cinemafrontend.jalo.CinemaFrontendManager" packageroot="it.cinemafrontend"/>
+	<coremodule generated="true" manager="it.cinemafrontend.jalo.CinemaFrontendManager" packageroot="it.cinemafrontend"/>
 
-      <webmodule jspcompile="false" webroot="/cinemaFrontend"/>
-					
+	<webmodule jspcompile="false" webroot="/cinemaFrontend"/>
+	
 	
 
-   </extension>
-      
+</extension>
+
 </extensioninfo>
