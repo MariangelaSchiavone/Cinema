@@ -9,5 +9,5 @@ public interface CinemaService
 {
 	List<CinemaModel> getCinemas();
 
-	CinemaModel getCinemaByCode(String code);
+	CinemaModel getCinemaForCode(String code);
 }
