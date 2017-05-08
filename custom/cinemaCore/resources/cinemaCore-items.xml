@@ -3,6 +3,7 @@
  [y] hybris Platform
 
  Copyright (c) 2000-2013 hybris AG
+
  All rights reserved.
 
  This software is the confidential and proprietary information of hybris
@@ -17,34 +18,154 @@
 -->
 
 <items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+	xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<enumtypes>
+		<enumtype code="GenreEnum" autocreate="true" generate="true" dynamic="false">
+			<value code="HORROR" />
+			<value code="DRAMA" />
+			<value code="THRILLER" />
+			<value code="COMEDY" />
+			<value code="ACTION" />
+			<value code="CARTOON" />
+			<value code="FANTASY" />
+		</enumtype>
+	</enumtypes>
+
+	<relations>
+		<relation code="DirectorMovieRelation" localized="false" generate="true" autocreate="true">
+			<sourceElement type="Director" qualifier="director" cardinality="one" />
+			<targetElement type="Movie" qualifier="movies" cardinality="many" />
+		</relation>
+		<relation code="ProductorMovieRelation" localized="false" generate="true" autocreate="true">
+			<sourceElement type="Productor" qualifier="productor" cardinality="one" />
+			<targetElement type="Movie" qualifier="movies" cardinality="many" />
+		</relation>
+		<relation code="CinemaShowtimeRelation" localized="false" generate="true" autocreate="true">
+			<sourceElement type="Cinema" qualifier="Cinema" cardinality="one" />
+			<targetElement type="Showtime" qualifier="showtimes" cardinality="many" />
+		</relation>
+		<relation code="ActorMovieRelation" localized="false" generate="true" autocreate="true">
+			<deployment table="ActorMovieRelation" typecode="10007" />
+			<sourceElement type="Actor" qualifier="actors" cardinality="many" />
+			<targetElement type="Movie" qualifier="movies" cardinality="many" />
+		</relation>
+	</relations>
 
 	<itemtypes>
-<!--
-		<itemtype generate="true"
-		   code="MyProduct"
-		   jaloclass="it.cinemacore.jalo.MyProduct"
-		   extends="Product"
-		   autocreate="true"
-	   >
+		<itemtype code="Director" generate="true" autocreate="true">
+			<deployment table="Director" typecode="10001" />
 			<attributes>
-				<attribute qualifier="myExampleInitialStringField" type="java.lang.String">
-					<description>My Example Initial String Value</description>
-					<modifiers initial="true"/>
-					<persistence type="property"/>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
 				</attribute>
-
-				<attribute qualifier="myExampleBooleanField" type="java.lang.Boolean">
-					<description>Example Initial Boolean Field</description>
-               <persistence type="property"/>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property" />
 				</attribute>
-
-				<attribute qualifier="media" type="Media">
-					<persistence type="property"/>
+				<attribute qualifier="surname" type="java.lang.String">
+					<persistence type="property" />
 				</attribute>
-
+				<attribute qualifier="nationality" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
 			</attributes>
 		</itemtype>
--->
+
+		<itemtype code="Actor" generate="true" autocreate="true">
+			<deployment table="Actor" typecode="10002" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="surname" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="nationality" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Productor" generate="true" autocreate="true">
+			<deployment table="Productor" typecode="10003" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="surname" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="nationality" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Movie" generate="true" autocreate="true">
+			<deployment table="Movie" typecode="10004" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="title" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="genre" type="GenreEnum">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="time" type="java.lang.Integer">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="year" type="java.lang.Integer">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="summary" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Cinema" generate="true" autocreate="true">
+			<deployment table="Cinema" typecode="10005" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="name" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="city" type="java.lang.String">
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Showtime" generate="true" autocreate="true">
+			<deployment table="Showtime" typecode="10006" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers optional="false" unique="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="date" type="java.util.Date">
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="movie" type="Movie">
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
 	</itemtypes>
 </items>
