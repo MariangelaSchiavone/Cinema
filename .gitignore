@@ -9,7 +9,8 @@
 *.ear
 
 config/licence
-**/eclipsebin/
+**/eclipsebin/*
+**/gensrc/*
 **/jalo/*
 **/constants/*
 
