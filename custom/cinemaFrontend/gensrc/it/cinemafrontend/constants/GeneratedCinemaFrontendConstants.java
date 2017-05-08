@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 8-mag-2017 13.05.47                         ---
+ * --- Generated at 8-mag-2017 18.33.48                         ---
  * ----------------------------------------------------------------
  */
 package it.cinemafrontend.constants;
